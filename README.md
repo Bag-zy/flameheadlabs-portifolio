@@ -1,33 +1,147 @@
-<div align="center">
-    <a href="https://chronark.com"><h1 align="center">chronark.com</h1></a>
+# FlameheadLabs Portfolio
 
-My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
+A modern, performant portfolio website for FlameheadLabs, built with Next.js, TypeScript, and Tailwind CSS. This project showcases the company's services, projects, and team members with a clean, responsive design.
 
-</div>
+## 🚀 Features
 
-<br/>
+- **Modern UI/UX**: Clean, responsive design with dark/light mode support
+- **Content Management**: MDX-based content for easy updates
+- **Performance Optimized**: Fast page loads and smooth animations
+- **Project Showcase**: Detailed project pages with rich content
+- **Team Section**: Meet the talented team behind FlameheadLabs
+- **Contact Form**: Easy way to get in touch
+- **View Analytics**: Page view tracking with Upstash Redis
 
+## 🛠 Tech Stack
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/upstash/clone?demo-title=Next.js%20Portfolio%20with%20Pageview%20Counter&demo-description=Portfolio%20site%20with%20pageview%20counter%2C%20built%20with%20Next.js%2013%20App%20Router%2C%20Contentlayer%2C%20and%20Upstash%20Redis.&demo-url=https%3A%2F%2Fchronark.com%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1DA8n5a6WaP9p1FXf9LmUY%2Fc6264fa2732355787bf657df92dda8a1%2FCleanShot_2023-04-17_at_14.17.37.png&project-name=Next.js%20Portfolio%20with%20Pageview%20Counter&repository-name=nextjs-portfolio-pageview-counter&repository-url=https%3A%2F%2Fgithub.com%2Fchronark%2Fchronark.com&from=templates&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Content**: [MDX](https://mdxjs.com/) with [Contentlayer](https://www.contentlayer.dev/)
+- **Database**: [Upstash Redis](https://upstash.com/) (for view counting)
+- **Deployment**: Vercel (recommended)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-## Running Locally
+## 🚀 Getting Started
 
+### Prerequisites
 
-```sh-session
-git clone https://github.com/chronark/chronark.com.git
-cd chronark.com
+- Node.js 18.0.0 or later
+- npm or pnpm
+- Upstash Redis account (for view counting)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Flamehead-Labs-Ug/portfolio.git
+   cd portfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add:
+   ```
+   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   UPSTASH_REDIS_REST_URL=your_redis_rest_url
+   UPSTASH_REDIS_REST_TOKEN=your_redis_rest_token
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📂 Project Structure
+
+```
+flameheadlabs-portfolio/
+├── app/                    # App router pages
+│   ├── about/              # About page
+│   ├── contact/            # Contact page
+│   ├── projects/           # Projects listing and details
+│   ├── services/           # Services listing and details
+│   └── ...
+├── components/            # Reusable components
+├── content/                # MDX content
+│   ├── projects/          # Project markdown files
+│   ├── services/          # Service markdown files
+│   └── team/              # Team member markdown files
+├── public/                # Static files
+└── styles/                # Global styles
 ```
 
+## ✍️ Adding Content
 
-Create a `.env` file similar to [`.env.example`](https://github.com/chronark/chronark.com/blob/main/.env.example).
+### Add a New Project
 
-Then install dependencies and run the development server:
-```sh-session
-pnpm install
-pnpm dev
-```
+1. Create a new `.mdx` file in `content/projects/` with the following frontmatter:
+   ```mdx
+   ---
+   title: "Project Name"
+   description: "Short description"
+   date: "YYYY-MM-DD"
+   published: true
+   repository: "https://github.com/username/repo"
+   ---
+   
+   Your project content here...
+   ```
 
+### Add a New Team Member
 
-## Cloning / Forking
+1. Create a new `.mdx` file in `content/team/` with the following frontmatter:
+   ```mdx
+   ---
+   title: "Full Name"
+   role: "Job Title"
+   date: "YYYY-MM-DD"
+   ---
+   
+   Team member bio and details...
+   ```
 
-Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+## 🔧 Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `NEXT_PUBLIC_SITE_URL` | Base URL of your site | Yes |
+| `UPSTASH_REDIS_REST_URL` | Upstash Redis REST URL | For view counting |
+| `UPSTASH_REDIS_REST_TOKEN` | Upstash Redis REST token | For view counting |
+
+## 🚀 Deployment
+
+### Vercel
+
+1. Push your code to a GitHub/GitLab/Bitbucket repository
+2. Import the repository on [Vercel](https://vercel.com/import)
+3. Add the required environment variables
+4. Deploy!
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons by [Lucide](https://lucide.dev/)
+- Content management with [Contentlayer](https://www.contentlayer.dev/)

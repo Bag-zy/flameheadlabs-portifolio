@@ -5,20 +5,20 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "FlameheadLabs",
+    template: "%s | FlameheadLabs",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "AI Automation & Generative AI Built on Ethical Foundations",
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "FlameheadLabs",
+    description: "AI Automation & Generative AI Built on Ethical Foundations",
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    siteName: "FlameheadLabs",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "/og.png",
         width: 1920,
         height: 1080,
       },

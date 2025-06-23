@@ -62,9 +62,57 @@ export const Page = defineDocumentType(() => ({
 	computedFields,
 }));
 
+export const Service = defineDocumentType(() => ({
+	name: "Service",
+	filePathPattern: "./services/**/*.mdx",
+	contentType: "mdx",
+
+	fields: {
+		published: {
+			type: "boolean",
+		},
+		title: {
+			type: "string",
+			required: true,
+		},
+		description: {
+			type: "string",
+			required: true,
+		},
+		date: {
+			type: "date",
+		},
+		url: {
+			type: "string",
+		},
+	},
+	computedFields,
+}));
+
+export const TeamMember = defineDocumentType(() => ({
+	name: "TeamMember",
+	filePathPattern: "./team/**/*.mdx",
+	contentType: "mdx",
+
+	fields: {
+		title: {
+			type: "string",
+			required: true,
+		},
+		role: {
+			type: "string",
+			required: true,
+		},
+		date: {
+			type: "date",
+		},
+	},
+	computedFields,
+}));
+
 export default makeSource({
 	contentDirPath: "./content",
-	documentTypes: [Page, Project],
+	documentTypes: [Page, Project, Service, TeamMember],
 	mdx: {
 		remarkPlugins: [remarkGfm],
 		rehypePlugins: [

@@ -1,0 +1,57 @@
+---
+title: "Flame Audio AI"
+description: "Speech transcription, translation, and AI chat application with document management"
+date: "2025-06-23"
+published: true
+url: "#"
+repository: "#"
+---
+
+## Overview
+Flame Audio AI is a powerful speech transcription, translation, and AI chat application that allows users to easily convert spoken language to text through recorded audio or uploaded files, with optional account creation for saving transcription history and chatting with AI agents about your documents.
+
+## Features
+
+### Playground (Audio Processing)
+- **Live Audio Recording**: Record audio directly in the browser with high-quality settings
+- **File Upload**: Support for multiple audio formats (flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, webm)
+- **Multiple Models**: Integration with Groq API's advanced audio transcription models
+- **Language Support**: Automatic language detection or manual language selection
+- **Task Options**: Transcribe in original language or translate to English
+
+### Document Management
+- **Vector Store Integration**: Store and retrieve documents using advanced vector embeddings
+- **Multiple Embedding Models**: Select from various embedding models for optimal semantic search
+- **Customizable Chunking**: Configure chunk size and overlap to optimize document retrieval
+- **Document Organization**: Associate documents with specific AI agents
+
+### MCP Service
+- **Dedicated Service**: Scalable, isolated processing for audio, chat, and agent tools
+- **Status Monitoring**: Configure and monitor MCP status and manage tools
+- **Advanced Orchestration**: Enable advanced features through the MCP service
+
+### Chat Capabilities
+- **AI Chat Agents**: Create customizable AI agents with different personalities and expertise
+- **Document-Aware Chat**: Chat about your transcribed documents with contextual understanding
+- **Chat Session Management**: Save and reload chat sessions for continued conversations
+- **Realtime Updates**: Vector store configurations update in real-time across the application
+
+### User Experience
+- **Intuitive Navigation**: Easily move between Home, Playground, Documents, MCP, and Chat interfaces
+- **Responsive Design**: Clean, modern UI that works across devices
+- **Flexible Authentication**: Optional user authentication that can be enabled/disabled via configuration
+- **Persistent Settings**: User preferences persist between sessions
+
+## Prerequisites
+- Python 3.9+
+- FastAPI backend server
+- Groq API key
+- PostgreSQL database
+- Supabase
+
+## Tech Stack
+- Frontend: Next.js, React
+- Backend: FastAPI, Python
+- Database: PostgreSQL
+- AI/ML: Groq API, Vector embeddings
+- Authentication: Supabase
