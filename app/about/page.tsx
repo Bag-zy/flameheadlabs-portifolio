@@ -9,7 +9,7 @@ const redis = Redis.fromEnv();
 export const revalidate = 60;
 
 // Filter and sort team members
-export async function getTeamMembers() {
+async function getTeamMembers() {
   // Filter for TeamMember documents and sort by name
   return allTeamMembers
     .filter((doc) => doc._raw.sourceFileDir === 'team')
